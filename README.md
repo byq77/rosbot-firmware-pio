@@ -29,7 +29,7 @@ Unfortunately, PlatformIO has a bug: https://github.com/platformio/platform-stst
 To import dependencies (not menaged by pio at the moment) run:
 
 ```
-git submodule update --init --recursive && git submodule update --remote
+git submodule update --init --recursive
 ```
 
 ## Speed up build process
