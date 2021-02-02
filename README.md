@@ -35,7 +35,7 @@ git submodule update --init --recursive
 ## Speed up build process
 https://docs.platformio.org/en/latest/frameworks/mbed.html#ignoring-particular-components
 
-In directory `.platformio/packages/framework-mbed/features` create file called `.mbedignore` with the following content:
+In directory `~/.platformio/packages/framework-mbed/features` create file called `.mbedignore` with the following content:
 
 ```
 cellular/*
@@ -58,9 +58,12 @@ Use `PlatformIO: Upload` task.
 
 ### Uploading firmware using `core2-flasher`
 
-Edit project's `mbed_app.json` file and change `"target.OUTPUT_EXT": "bin"` line to `"target.OUTPUT_EXT": "hex"`. Build your project.
-
-You will find `firmware.hex` in `./pio/core2`.
+<!-- Edit project's `mbed_app.json` file and change `"target.OUTPUT_EXT": "bin"` line to `"target.OUTPUT_EXT": "hex"`. Build your project. -->
+To create intel hex file use `arm-none-eabi-objcopy`: 
+```bash
+$ arm-none-eabi-objcopy -O ihex firmware.elf firmware.hex 
+```
+You will find `firmware.elf` in `./pio/core2`.
 
 > TODO: add core2-flasher to repository (download right version by detecting system type)
 

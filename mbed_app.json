@@ -12,8 +12,7 @@
             "platform.default-serial-baud-rate": 230400,
             "platform.stdio-baud-rate": 230400,
             "drivers.uart-serial-rxbuf-size": 768, 
-            "drivers.uart-serial-txbuf-size": 768,
-            "target.OUTPUT_EXT": "bin"
+            "drivers.uart-serial-txbuf-size": 768
         }
     }
 }
